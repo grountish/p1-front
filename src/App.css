@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Mantra;
+  src: url("./fonts/Mantra-Regular.ttf");
+}
+
+@font-face {
+  font-family: Comfortaa;
+  src: url("./fonts/Comfortaa-Medium.ttf");
+}
+
+body{
+  background-image: url('./images/fondo.jpg');
+
+}
+
+button{
+  padding: 8px 8px;
+  border: 1px solid white;
+  border-radius: 5%;
+  text-decoration: none;
+  background: none;
+  margin: 10px auto;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+}
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+  font-family: Mantra;
+  font-size: 1.2rem;
+  max-height: 3rem;
+  width: 95%;
+  margin-left: 2.5%;
+  letter-spacing: 2px;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+ 
+}
+.centeredBtn{
+  margin: 10px 150px;
+}
+button:hover{
+  background-color: rgba(238, 252, 249, 0.37);
+}
+.nameScene{
+  font-family: Mantra;
+  padding-top: 40%;
+  font-size: 27px;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.userScene{
+  padding-left: 30px;
+  font-size: 20px;
+  color: rgb(66, 70, 88);
+}
+
+a:visited { text-decoration: none; color:black; }
+a:hover { text-decoration: none; color:white; }
+
+  input * {
+    background: none;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: yellow;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+      color: white;
+  }
+
+  .buttonMalo {
+    margin: auto 130px;
+  }
+
+  .spinner {
+    margin: 20% 40%;
+    width: 300px;
+  }
+
+  .navbar-btns {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 50%;
+    margin-left: 15rem;
+    color: black;
+    margin-top: 15px;
+    text-decoration: none;
+  }
+  .navbar-btns * {
+    margin-left: 14px;
+    text-decoration: none;
+    color: black;
+  }
+  #xp-btn {
+    text-decoration: none;
+    
+  }
+  .logo {
+    font-family: Mantra;
+    font-size: 2.3rem;
+    padding: 2rem;
+    margin-right: 2rem;
+    color: white;
+    
+  }
+  a{
+    text-decoration: none;
+  }
