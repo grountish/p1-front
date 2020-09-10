@@ -1,17 +1,24 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { withAuth } from "../lib/Auth";
+import useWindowSize from '../lib/useWindowsSize'
 
+const Navigation = ({ user, logout, isLoggedIn })=> {
+ 
+  const [isActive, setIsActive] = useState(false)
+  const size = useWindowSize();
 
-
-class Navigation extends Component {
-  render() {
-    // `user`, `logout`, `isLoggedIn` are coming from the AuthProvider
-    // and are injected by the withAuth HOC
-    const { user, logout, isLoggedIn } = this.props;
-
+  // useEffect(() => {
+  
+  //   if (size.width > 500) setIsActive(true)
+  // }, [size.width])
+ 
     return (
-      <div className="navigation">
+     
+      <div>
+        {
+          size.width > 500 || isActive
+          ? <div className="navigation" >
         <Link to={"/private"} id="xp-btn">
           <h4 className="logo">p1</h4>
         </Link>
@@ -36,10 +43,15 @@ class Navigation extends Component {
             <Link to={"/community"} id="comunity-btn">
               <h4>community</h4>
             </Link>
-            <h4 onClick={logout}>logout</h4>
+            <h4 className="comunity-btn" onClick={logout}>logout</h4>
+            {
+              isActive
+              ?<h1 onClick={()=>setIsActive(!isActive)}>X</h1>
+              :null
+            }
           </div>
         ) : (
-          <>
+          <div className="log-sign">
             <Link to="/login">
               {" "}
               <h4 className="navbar-button">login</h4>{" "}
@@ -49,10 +61,20 @@ class Navigation extends Component {
               {" "}
               <h4 className="navbar-button">signup</h4>{" "}
             </Link>
-          </>
+            {
+              isActive
+              ?<h1 onClick={()=>setIsActive(!isActive)}>X</h1>
+              :null
+            }
+            
+          </div>
         )}
       </div>
+      : <h1 onClick={()=>setIsActive(!isActive)}>X</h1>
+        }
+      </div>
+      
     );
   }
-}
+
 export default withAuth(Navigation);

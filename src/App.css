@@ -1,126 +1,316 @@
+:root {
+    --main-color: black;
+    --secondary-color: rgb(33, 33, 65);
+    --third-color: rgb(233, 233, 233);
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--main-color);
 }
 
-@font-face {
-  font-family: Mantra;
-  src: url("./fonts/Mantra-Regular.ttf");
+
+
+body {
+    /* background-image: url('./images/fondo2.jpg'); */
+    background-image: repeating-linear-gradient(90deg, hsla(298, 16%, 68%, 0.06) 0px, hsla(298, 16%, 68%, 0.06) 1px, transparent 1px, transparent 21px, hsla(298, 16%, 68%, 0.06) 21px, hsla(298, 16%, 68%, 0.06) 22px, transparent 22px, transparent 72px), repeating-linear-gradient(0deg, hsla(298, 16%, 68%, 0.06) 0px, hsla(298, 16%, 68%, 0.06) 1px, transparent 1px, transparent 21px, hsla(298, 16%, 68%, 0.06) 21px, hsla(298, 16%, 68%, 0.06) 22px, transparent 22px, transparent 72px), repeating-linear-gradient(135deg, hsla(298, 16%, 68%, 0.06) 0px, hsla(298, 16%, 68%, 0.06) 1px, transparent 1px, transparent 21px, hsla(298, 16%, 68%, 0.06) 21px, hsla(298, 16%, 68%, 0.06) 22px, transparent 22px, transparent 72px), linear-gradient(90deg, hsl(275, 3%, 97%), hsl(275, 3%, 97%));
+    ;
 }
 
-@font-face {
-  font-family: Comfortaa;
-  src: url("./fonts/Comfortaa-Medium.ttf");
+button {
+    padding: 8px 8px;
+    border: 1px solid var(--main-color);
+    border-radius: 5%;
+    text-decoration: none;
+    background: none;
+    margin: 10px auto;
+    color: var(--main-color);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
 }
 
-body{
-  background-image: url('./images/fondo.jpg');
-
-}
-
-button{
-  padding: 8px 8px;
-  border: 1px solid white;
-  border-radius: 5%;
-  text-decoration: none;
-  background: none;
-  margin: 10px auto;
-  color: white;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
-}
 .navigation {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-items: center;
-  justify-content: space-around;
-  font-family: Mantra;
-  font-size: 1.2rem;
-  max-height: 3rem;
-  width: 95%;
-  margin-left: 2.5%;
-  letter-spacing: 2px;
-  text-decoration: none;
-  border-bottom: 1px solid white;
- 
-}
-.centeredBtn{
-  margin: 10px 150px;
-}
-button:hover{
-  background-color: rgba(238, 252, 249, 0.37);
-}
-.nameScene{
-  font-family: Mantra;
-  padding-top: 40%;
-  font-size: 27px;
-  color: white;
-  text-align: center;
-  margin-bottom: 10px;
+    display: flex;
+    background-color: burlywood;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+    font-family: Mantra;
+    font-size: 1.2rem;
+    height: 3rem;
+    width: 95%;
+    margin-left: 2.5%;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--main-color);
+    transition: height 0.4s;
 }
 
-.userScene{
-  padding-left: 30px;
-  font-size: 20px;
-  color: rgb(66, 70, 88);
+.centeredBtn {
+    margin: 10px 150px;
 }
 
-a:visited { text-decoration: none; color:black; }
-a:hover { text-decoration: none; color:white; }
+button:hover {
+    background-color: rgba(238, 252, 249, 0.37);
+    color: var(--third-color);
+}
 
-  input * {
+a:visited {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+input * {
     background: none;
     outline: none;
     font-family: 'Courier New', Courier, monospace;
-    color: yellow;
-  }
+    color: var(--main-color);
+}
 
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active {
-      transition: background-color 5000s ease-in-out 0s;
-      color: white;
-  }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    color: var(--main-color);
+}
 
-  .buttonMalo {
-    margin: auto 130px;
-  }
 
-  .spinner {
+.spinner {
     margin: 20% 40%;
     width: 300px;
-  }
+}
 
-  .navbar-btns {
+.navbar-btns {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    width: 50%;
-    margin-left: 15rem;
-    color: black;
-    margin-top: 15px;
+    color: var(--main-color);
+    margin: 55px;
     text-decoration: none;
-  }
-  .navbar-btns * {
+    transition: height 0.4s;
+
+}
+
+.navbar-btns * {
     margin-left: 14px;
     text-decoration: none;
-    color: black;
-  }
-  #xp-btn {
-    text-decoration: none;
-    
-  }
-  .logo {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.log-sign {
+    width: 30%;
+    margin-left: auto;
+    margin-right:20px;
+    display: flex;
+    justify-content: space-around;
+}
+.log-sign *{
+    margin-right:10px;
+}
+
+.logo {
     font-family: Mantra;
     font-size: 2.3rem;
-    padding: 2rem;
+
     margin-right: 2rem;
-    color: white;
-    
-  }
-  a{
+    color: var(--main-color);
+}
+
+a {
     text-decoration: none;
+}
+
+/* LOGIN */
+.LoginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.LoginPage {
+    display: flex;
+    font-family: courier;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    letter-spacing: 2px;
+    color: var(--main-color);
+}
+
+
+
+.LoginPage button, .SignupPage button {
+    font-family: courier;
+    background: none;
+    font-size: 1rem;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    margin-top: 2.5rem;
+    border-radius: 5%;
+    width: 8rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+.LoginPage button:hover, .SignupPage button:hover {
+    background-color: var(--main-color);
+    color: var(--third-color);
+}
+
+.LoginPage p {
+    margin-top: 8%;
+}
+
+.LoginPage a:link {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+label {
+    font-size: 1.5rem;
+    font-weight: 400;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+/* PROFILE */
+
+.ProfilePage {
+    align-items: center;
+    color: black;
+
+}
+
+.ProfilePage .buttonMalo {
+    padding: 2px;
+    padding-top: 0;
+}
+
+.ProfileDiv {
+    margin-top: 7%;
+    margin-bottom: 200px;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    width: 34%;
+    float: left;
+    height: 100%;
+    border-right: 1px solid #AAA;
+}
+
+.ProfPic {
+    width: 13rem;
+    height: 13rem;
+    border: solid 2px black;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 100% 50;
+    box-shadow: 1px 1px 5px 1px #777;
+}
+
+
+.Mail {
+    font-family: courier;
+    font-size: 1.2rem;
+    color: var(--main-color);
+    margin-top: 2rem;
+}
+
+
+
+.Info {
+    font-family: courier;
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--main-color);
+    margin: 1.6rem;
+}
+
+/* SIGNUP */
+
+
+.SignupPage {
+    display: flex;
+    font-family: courier;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.SignupPage p {
+    margin-top: 5%;
+    margin-bottom: 6%;
+}
+
+.SignupPage a:link {
+    /* text-decoration: none; */
+    color: black;
+}
+
+.SignupPage a:visited, .LoginPage a:visited {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.SignupPage a:hover, 
+.SignupPage a:active, .LoginPage a:hover, 
+.LoginPage a:active {
+    text-decoration: underline;
+    color: black;
+}
+
+.SignupForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-top: 8%;
+    text-align: center;
+}
+
+input {
+    font-family: courier;
+    margin: 0.7rem;
+    background: none;
+    font-size: 1em;
+    padding: 1em 6em;
+    text-align: center;
+    color: var(--main-color);
+    border: none;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+
+/* MEDIAQUERYS */
+
+@media screen and (max-width: 500px) {
+  .navigation {
+      position: absolute;
+    height: 100vh;
   }
+  .navbar-btns{
+      height:50vh;
+      flex-direction:column
+  }
+}

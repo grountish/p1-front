@@ -30,7 +30,7 @@ const Label = styled.label`
 
 const Input = styled.input`
   font-family: courier;
-  color: yellow;
+  color: black;
   margin: 0.7rem;
   margin-top: 1%;
   background: none;
